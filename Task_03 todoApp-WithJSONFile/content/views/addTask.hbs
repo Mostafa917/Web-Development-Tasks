@@ -1,0 +1,15 @@
+{{>header}}
+{{>nav}}
+<section class="container text-white">
+
+<form method="post" action="/addPost">
+  <label for="name">Title:</label><br>
+  <input class="form-control" name="title" placeholder="Enter Title..." required="required"><br>
+   <label for="age">Content:</label><br>
+  <input class="form-control" name="content" placeholder="Enter Content..." required="required"><br>
+      <label for="email">Due Date:</label><br>
+  <input class="form-control" type="date" name="date" required="required"><br>
+  <button class="btn btn-primary">Add Task</button>
+</form> 
+</section>
+{{>footer}}
