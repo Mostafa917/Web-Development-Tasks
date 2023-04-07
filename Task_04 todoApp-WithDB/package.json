@@ -1,0 +1,21 @@
+{
+  "name": "task_04-todoappwithdb",
+  "version": "1.0.0",
+  "description": "To Do Application",
+  "main": "host.js",
+  "scripts": {
+    "start": "node host",
+    "dev": "nodemon host -e js,css,hbs"
+  },
+  "keywords": [],
+  "author": "Mostafa",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "env": "^0.0.2",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongodb": "^4.14.0"
+  },
+  "devDependencies": {}
+}
