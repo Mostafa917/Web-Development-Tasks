@@ -1,0 +1,23 @@
+{{>header}}
+{{>nav}}
+<section class="container my-4 bg-light bg-gradient">
+    <table class="table table-stripped">
+        <thead>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Due Date</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <tr>
+    <td>{{singleTask._id}}</td>
+    <td>{{singleTask.title}}</td>
+    <td>{{singleTask.content}}</td>
+    <td>{{singleTask.date}}</td>
+    <td>{{singleTask.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+{{>footer}}

@@ -1,0 +1,14 @@
+{{>header}}
+{{>nav}}
+<section class="container text-white">
+<form action="/editLogic/{{task._id}}">
+  <label for="name">Title:</label><br>
+  <input class="form-control" name="title" placeholder="Enter Title..." value="{{task.title}}" required="required" ><br>
+   <label for="age">Content:</label><br>
+  <input class="form-control" name="content" placeholder="Enter Content..." value="{{task.content}}" required="required" ><br>
+      <label for="email">Due Date:</label><br>
+  <input class="form-control" type="date" name="date" value="{{task.date}}" required="required" ><br>
+  <button class="btn btn-primary">Edit Task</button>
+</form> 
+</section>
+{{>footer}}

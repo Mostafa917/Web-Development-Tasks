@@ -1,0 +1,51 @@
+{{>header}}
+{{>nav}}
+
+<section class="text-center mb-1 container text-dark bg-light mt-3">
+    <form action="/searchLogic">
+  <label for="search" class="h1 fw-bold text-secondary">Search Content or Title:</label><br>
+  <input class="form-control" name="search" placeholder="Search..."><br>
+    <button class="btn btn-primary">Search</button><br><br>
+    </form>
+
+</section>
+
+<section class="container mt-5 bg-light bg-gradient">
+    <table class="table table-stripped">
+        <thead class="text-center">
+            <th>ID</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
+            {{#if results}}
+{{#each results}}
+
+<tr class="text-center">
+    <td>{{_id}}</td>
+    <td>{{title}}</td>
+    <td>{{content}}</td>
+    <td>{{date}}</td>
+    <td>{{status}}</td>
+    <td>
+        <a href="/singleTask/{{_id}}" class="btn btn-primary my-1">Show</a>
+        <a href="/editTask/{{_id}}" class="btn btn-warning mx-1">Edit</a>
+        <a href="/status/{{_id}}" class="btn btn-info">Activate/Deactivate</a>
+        <a href="/completeStatus/{{_id}}" class="btn btn-success mx-1">Complete</a>
+        <a href="/del/{{_id}}" class="btn btn-danger">Delete</a>
+    </td>
+</tr>
+
+{{/each}}
+
+{{else}}
+<div class ="h1 text-center">No Results Found!</div>
+
+{{/if}}
+        </tbody>
+    </table>
+</section>
+{{>footer}}
