@@ -1,0 +1,33 @@
+<div class="container">
+    <app-form (sendingUserData)="handleUser($event)"></app-form>
+    <div class = "alert alert-info" *ngIf="users.length>0; then tableTrue; else tableFalse"></div>
+
+    <ng-template  #tableTrue>
+     <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+    <tr *ngFor="let user of users; let i = index;">
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td><button class="btn btn-danger" (click)="deleteUser(i)">Delete User</button></td>
+        <td><button class="btn btn-info" (click)="editUser(user)">Edit User Email</button></td>
+      </tr>
+
+
+    </tbody>
+  </table>
+    </ng-template> 
+
+     <ng-template #tableFalse>
+        <div class="bg-secondary p-5">
+       <h2 class="text-center text-black">Table is Empty</h2>
+    </div>
+            </ng-template> 
+</div>

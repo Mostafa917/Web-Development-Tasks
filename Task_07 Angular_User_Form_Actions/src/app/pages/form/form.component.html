@@ -1,0 +1,10 @@
+<div class="container">
+    <form class="text-center py-5">
+    <div>
+<input type="text" class="form-control my-3" placeholder="enter username" [(ngModel)]="userData.username" name="username">
+</div>
+<div>
+    <input type="text" class="form-control mb-3" placeholder="enter email" [(ngModel)]="userData.email" name="email">
+    </div>
+<button class="btn btn-primary mx-2" (click)="handleClick()">Add User</button>
+</form></div>

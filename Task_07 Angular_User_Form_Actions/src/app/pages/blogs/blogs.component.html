@@ -1,0 +1,34 @@
+<!--<div class="container">
+    
+<div *ngIf="divFlag; else Data ">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aspernatur ipsam sequi. Hic veniam reiciendis earum recusandae delectus mollitia dolore qui natus consequuntur veritatis omnis sunt tenetur error, molestiae porro?</p>
+</div>
+<ng-template #Data>
+    <div>
+        Another Div
+    </div>
+</ng-template>
+
+<button class="btn bg-primary" (click)="divFlag = true">Show Div</button>
+<button class="btn bg-primary" (click)="divFlag=!divFlag">Toggle Div</button>
+<div class = "alert alert-info" *ngIf="arr.length >6; then trueCondition; else falseCondition"></div>
+</div>
+<ng-template #trueCondition>
+    <div class ="alert alert-primary">TRUE</div>
+</ng-template>
+<ng-template #falseCondition>
+    <div>FALSE</div>
+</ng-template>
+-->
+<div class ="container">
+
+ <div>
+         <div [ngSwitch]="month">
+             <ng-container *ngFor="let item of months ; let i = index">
+                <div *ngSwitchCase="i">Current Month is : {{item}}</div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<h3 [ngStyle]="{'color':arr.length>5 ? 'green':'gold'}"> BLUE</h3>
